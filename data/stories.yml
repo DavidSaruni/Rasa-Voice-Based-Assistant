@@ -1,0 +1,58 @@
+version: "2.0"
+
+stories:
+- story: happy path greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: happy path without 4g sim
+  steps:
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: happy path
+  steps:
+  - intent: network_issue
+  - action: form_info
+  - active_loop: form_info
+  - action: action_your_num
+  - active_loop: null
+  - intent: affirm
+  - action: utter_tell_issue
+  - intent: facing_issue
+  - action: utter_change_settings
+  - intent: guide_me
+  - action: utter_solution
+  - intent: have_to_do
+  - action: utter_solution_4G
+  - intent: thanks
+  - action: utter_anything_else
+
+- story: deny
+  steps:
+  - intent: network_issue
+  - action: form_info
+  - active_loop: form_info
+  - action: action_your_num
+  - active_loop: null
+  - intent: affirm
+  - action: utter_tell_issue
+  - intent: facing_issue
+  - action: utter_change_settings
+  - intent: guide_me
+  - action: utter_solution
+  - intent: have_to_do
+  - action: utter_solution_4G
+  - intent: deny
+  - action: utter_thanks

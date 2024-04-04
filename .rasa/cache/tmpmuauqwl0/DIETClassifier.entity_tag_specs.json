@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-BRAND",
+      "2": "I-BRAND",
+      "3": "L-BRAND",
+      "4": "U-BRAND",
+      "5": "B-NAME",
+      "6": "I-NAME",
+      "7": "L-NAME",
+      "8": "U-NAME",
+      "9": "B-NETWORK",
+      "10": "I-NETWORK",
+      "11": "L-NETWORK",
+      "12": "U-NETWORK",
+      "13": "B-num",
+      "14": "I-num",
+      "15": "L-num",
+      "16": "U-num",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-BRAND": 1,
+      "I-BRAND": 2,
+      "L-BRAND": 3,
+      "U-BRAND": 4,
+      "B-NAME": 5,
+      "I-NAME": 6,
+      "L-NAME": 7,
+      "U-NAME": 8,
+      "B-NETWORK": 9,
+      "I-NETWORK": 10,
+      "L-NETWORK": 11,
+      "U-NETWORK": 12,
+      "B-num": 13,
+      "I-num": 14,
+      "L-num": 15,
+      "U-num": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
