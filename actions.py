@@ -14,8 +14,8 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormValidationAction
 
 details = {
-    'ashish': '+91 8209829808',
-    'innovate': '+91 9413995563'
+    'patience': '+91 8209829808',
+    'captain': '+91 9413995563'
 }
 
 
@@ -78,9 +78,9 @@ class ActionFormInfo(FormValidationAction):
         """Database of supported cuisines"""
 
         return [
-            "samsung",
-            "One plus",
-            "I-phone",
+            "m-pesa",
+            "bank",
+            "e-banking",
         ]
 
     def validate_brand(

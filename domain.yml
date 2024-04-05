@@ -18,13 +18,13 @@ intents:
 
 responses:
   utter_greet:
-    - text: "Hello! I am calling from Innovate Yourself. How may I assist you?"
+    - text: "Hello! I am calling from Cheerful Chap. How may I assist you?"
   utter_ask_BRAND:
-    - text: "Sir, I would like to tell you that your issues will be resolved. Could I please know which handset you are using?"
+    - text: "Thank you for being kind, I help you donate your money. Could I please know which mode of payment you are using?"
   utter_ask_NAME:
     - text: "Ok. Please provide your first name?"
   utter_change_settings:
-    - text: "I would like to tell you, sir, that you need to change certain settings of your phone because there is no issue on your end."
+    - text: "I would like to tell you, that you need to change certain settings of your phone because there is no issue on your end."
   utter_cheer_up:
     - image: "https://i.imgur.com/nGF1K8f.jpg"
       text: "Here is something to cheer you up:"
@@ -39,13 +39,13 @@ responses:
   utter_iamabot:
     - text: "I am a bot, powered by Rasa."
   utter_num_confirm:
-    - text: "Is this the same mobile number on which you are facing network issues?"
+    - text: "Is this the same mobile number on which you want to send the money?"
   utter_num_verify:
     - text: "Could you please confirm me your mobile number?"
   utter_solution:
     - text: "Sure sir, I will guide you for that. Go to your settings, select network, and select 3G if you’ve chosen 4G because your sim is not supporting 4G. That’s why you are facing problems while calling."
   utter_solution_4G:
-    - text: "Please visit your nearest store. They will provide you the 4G sim for the same."
+    - text: "Please visit your nearest M-Pesa shop. They will provide you with assistance"
   utter_submit:
     - text: "Your name is {name} and your headset is {headset}. Is this correct?"
   utter_tell_issue:
