@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #e3f2fd;
+}
+
+.chatbot {
+  position: fixed;
+  right: 40px;
+  bottom: 100px;
+  width: 420px;
+  overflow: hidden;
+  transform: scale(0.5);
+  opacity: 0;
+  pointer-events: none;
+  background: #fff;
+  border-radius: 15px;
+  transform-origin: bottom right;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease;
+}
+
+.chatbot header {
+  background: rgb(0, 208, 130);
+  padding: 16px 0;
+  text-align: center;
+  position: relative;
+}
+
+.chatbot header h2 {
+  color: #fff;
+  font-size: 1.4rem;
+}
+.chatbot header span {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  transform: translateY(-50%);
+}
+
+.chatbot .chatbox {
+  height: 510px;
+  overflow-y: auto;
+  padding: 30px 20px 100px;
+}
+
+.chatbox .chat {
+  display: flex;
+}
+
+.chatbox .incoming span {
+  height: 32px;
+  width: 32px;
+  color: #fff;
+  align-self: flex-end;
+  background: rgb(0, 208, 130);
+  text-align: center;
+  line-height: 32px;
+  border-radius: 4px;
+
+  margin: 0 10px 7px 0;
+}
+
+.chatbox .outgoing {
+  margin: 20px 0;
+  margin-right: 0 !important;
+  justify-content: flex-end;
+}
+
+.chatbox .chat p {
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 0.95rem;
+  max-width: 75%;
+  white-space: pre-wrap;
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 10px;
+  background: rgb(0, 208, 130);
+}
+
+.chatbox .chat div {
+  max-width: 75%;
+  padding: 12px 5px;
+}
+
+/* .chatbox .chat .chat-content {
+  background: #f2f2f2; 
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} */
+
+.chatbox .chat p.error {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.chatbot-toggler {
+  position: fixed;
+  right: 40px;
+  bottom: 35px;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background: rgb(0, 208, 130);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.show-chatbot .chatbot-toggler {
+  transform: rotate(90deg);
+}
+
+.show-chatbot .chatbot {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chatbot-toggler span {
+  position: absolute;
+}
+
+.show-chatbot .chatbot-toggler span:first-child,
+.chatbot-toggler span:last-child {
+  opacity: 0;
+}
+
+.show-chatbot .chatbot-toggler span:last-child {
+  opacity: 1;
+}
+
+.chatbox .incoming p {
+  color: #000;
+  background: #f2f2f2;
+  border-radius: 10px 10px 10px 0;
+}
+
+.chatbot .chat-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  background: #fff;
+  padding: 5px 20px;
+  border-top: 1px solid #ccc;
+}
+
+.chatbot .chat-input textarea {
+  height: 55px;
+  width: 100%;
+  border: none;
+  outline: none;
+  max-height: 180px;
+  font-size: 0.95rem;
+  resize: none;
+  padding: 16px 15px 16px 0;
+}
+
+.chat-input span {
+  align-self: flex-end;
+  height: 55px;
+  line-height: 55px;
+  font-size: 1.35rem;
+  cursor: pointer;
+  color: rgb(0, 208, 130);
+}
+.chat-input #send-btn {
+  visibility: hidden;
+}
+
+.chat-input textarea:valid ~ #send-btn {
+  visibility: visible;
+}
+
+.chat-input #stop-btn {
+  display: none;
+}
+
+/* Style for the container of the response buttons */
+.response-buttons {
+  margin: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Style for each response button */
+.response-buttons button {
+  background-color: #00d082; /* Green background similar to the theme */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.95rem;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+.response-buttons button:hover {
+  background-color: #008c59; /* Slightly darker shade for hover */
+}
+
+/* Style for the button when it's focused or active */
+.response-buttons button:focus,
+.response-buttons button:active {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 130, 82, 0.5); /* Shadow with color similar to theme */
+}
+
+@media (max-width: 490px) {
+  .chatbot {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .chatbot .chatbox {
+    height: 90%;
+  }
+  .chatbot header span {
+    display: block;
+  }
+}

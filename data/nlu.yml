@@ -1,127 +1,59 @@
 nlu:
-- intent: network_issue
-  examples: |
-    - Actually, I gave a call regarding the network issues.
-    - I called regarding network issue
-    - I am facing the network issue
-
-- intent: my_name_is
-  examples: |
-    - My name is [Patience](NAME)
-    - [Patience](NAME:Patience) this side
-    - It's [Patience](NAME:Patience)
-    - [Patience](NAME:Patience) is my name
-    - you can call me [Innovate](NAME)
-    - [Patience](NAME)
-    - [Rahul](NAME)
-    - [Innovate](NAME)
-    - [Patience](NAME:Patience)
-    - [Patience](NAME:Patience)
-
-- intent: facing_issue
-  examples: |
-    - I want to donate money [network issues](NETWORK) to the organization
-    - I want to share a small token [network issues](NETWORK) to the organization
-
-- intent: headset
-  examples: |
-    - I am using a [m-pesa](BRAND:m-pesa) phone.
-    - I have e-banking account with [m-pesa](BRAND:bank)
-    - I am using [one +](BRAND:One plus)
-    - I use [I-phone](BRAND)
-    - I prefer [i phone](BRAND:I-phone)
-    - i am using [one plus](BRAND:One plus) mobile
-    - i am using [sam sung](BRAND:samsung)
-    - i am using [oneplus](BRAND:One plus) mobile
-    - i am using [nokia](BRAND) mobile
-
-- intent: guide_me
-  examples: |
-    - Could you please guide me?
-    - could you suggest me how to do that?
-    - guide me how to do it
-    - i don't know how to do it
-
-- intent: have_to_do
-  examples: |
-    - What will I have to do to get a 4G SIM for the same number?
-    - What is the procedure to get the 4G SIM for the same number
-    - process to get the 4G SIM for the same number
-
-- intent: thanks
-  examples: |
-    - Thank you so much!
-    - thanks
-    - tnx
-    - thank you so much
-    - thanks alot
-    - ty
 
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - good morning
-    - good evening
-    - hey there
+    - Hi
+    - Hello
+    - Hey there
+    - Good morning
+    - Good afternoon
+    - Good evening
+
+- intent: donate_money
+  examples: |
+    - I would like to donate 100 dollars
+    - I would love to donate $100
+    - Can I make a donation of 50 euros
+    - I want to donate 200 rupees
+    - I would like to donate Kshs. 100,000
+    - I want to donate 50,000 Kenyan shillings
+
+- intent: phone_number
+  examples: |
+    - 0712345678
+    - +25412345678
+    - 0711223344
+    - +25470000000
+
+
+- intent: confirm_donation
+  examples: |
+    - Yes, confirm
+    - Confirm donation
+    - Proceed with donation
+    - I confirm
+    - Yes, I want to donate
+
+- intent: cancel_donation
+  examples: |
+    - Cancel donation
+    - No, cancel
+    - Stop donation process
+    - I changed my mind
+    - Cancel
+
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks a lot
+    - Appreciate your help
+    - Thanks for your assistance
+    - Thank you so much
+
 
 - intent: goodbye
   examples: |
-    - bye
-    - goodbye
-    - see you around
-    - see you later
-
-- intent: affirm
-  examples: |
-    - yes
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - very good
-    - great
-    - amazing
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I'm good
-
-- intent: mood_unhappy
-  examples: |
-    - sad
-    - very sad
-    - unhappy
-    - bad
-    - very bad
-    - awful
-    - terrible
-    - not very good
-    - extremely sad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-
-- intent: number
-  examples: |
-    - [7](num:7)
-    - [seven](num:7)
+    - Goodbye
+    - Bye
+    - See you later
+    - Have a nice day

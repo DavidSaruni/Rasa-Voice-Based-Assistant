@@ -1,16 +1,16 @@
-rules:
-  - rule: Activate form_info
-    steps:
-      - intent: inform
-      - action: form_info
-      - active_loop: form_info
+# rules:
+#   - rule: Activate form_info
+#     steps:
+#       - intent: inform
+#       - action: form_info
+#       - active_loop: form_info
       
-  - rule: Submit form_info
-    condition:
-      - active_loop: form_info
-    steps:
-      - action: form_info
-      - active_loop: null
-      - slot_was_set:
-          - requested_slot: null
-      - action: action_submit_form_info
+#   - rule: Submit form_info
+#     condition:
+#       - active_loop: form_info
+#     steps:
+#       - action: form_info
+#       - active_loop: null
+#       - slot_was_set:
+#           - requested_slot: null
+#       - action: action_submit_form_info

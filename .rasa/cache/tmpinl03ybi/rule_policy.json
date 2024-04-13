@@ -1,0 +1,22 @@
+{
+  "lookup": {
+    "rules": {},
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_AMOUNT\"}, \"user\": {\"intent\": \"greet\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_ask_AMOUNT\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_PHONE_NUMBER\"}, \"user\": {\"intent\": \"greet\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_ask_PHONE_NUMBER\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"action_process_donation\"}, \"user\": {\"intent\": \"greet\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_process_donation\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"action_confirm_donation\"}, \"user\": {\"intent\": \"greet\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_confirm_donation\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"utter_thanks\"}, \"user\": {\"intent\": \"greet\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_ask_PHONE_NUMBER\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"action_cancel_donation\"}, \"user\": {\"intent\": \"greet\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "handling active loops and forms - donate_form - action_listen",
+      "predicting default action with intent back",
+      "predicting default action with intent restart",
+      "handling active loops and forms - donate_form",
+      "predicting default action with intent session_start"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "lookup": {
+    "rules": {},
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"donate_form\"}, \"user\": {\"entities\": [\"AMOUNT\"], \"intent\": \"inform\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"donate_form\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_PHONE_NUMBER\"}, \"user\": {\"entities\": [\"AMOUNT\"], \"intent\": \"inform\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"action_cancel_donation\"}, \"user\": {\"intent\": \"goodbye\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"donate_form\"}, \"user\": {\"intent\": \"donate_money\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"donate_form\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"utter_ask_PHONE_NUMBER\"}, \"user\": {\"intent\": \"donate_money\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"action_process_donation\"}, \"user\": {\"intent\": \"donate_money\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_process_donation\"}}, {\"active_loop\": {\"name\": \"donate_form\"}, \"prev_action\": {\"action_name\": \"utter_thanks\"}, \"user\": {\"intent\": \"donate_money\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent back",
+      "predicting default action with intent session_start",
+      "handling active loops and forms - donate_form",
+      "handling active loops and forms - donate_form - action_listen"
+    ]
+  }
+}

@@ -2,113 +2,36 @@ version: "3.0"
 
 intents:
   - greet
-  - headset
-  - affirm
-  - network_issue
-  - my_name_is
+  - donate_money
+  - phone_number
+  - confirm_donation
+  - cancel_donation
   - thanks
-  - facing_issue
-  - guide_me
   - goodbye
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - have_to_do
 
 responses:
   utter_greet:
-    - text: "Hello! I am calling from Cheerful Chap. How may I assist you?"
-  utter_ask_BRAND:
-    - text: "Thank you for being kind, I help you donate your money. Could I please know which mode of payment you are using?"
-  utter_ask_NAME:
-    - text: "Ok. Please provide your first name?"
-  utter_change_settings:
-    - text: "I would like to tell you, that you need to change certain settings of your phone because there is no issue on your end."
-  utter_cheer_up:
-    - image: "https://i.imgur.com/nGF1K8f.jpg"
-      text: "Here is something to cheer you up:"
-  utter_chitchat:
-    - text: "I'm not designed for this."
-  utter_did_that_help:
-    - text: "Did that help you?"
-  utter_goodbye:
-    - text: "Bye"
-  utter_happy:
-    - text: "Great, carry on!"
-  utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-  utter_num_confirm:
-    - text: "Is this the same mobile number on which you want to send the money?"
-  utter_num_verify:
-    - text: "Could you please confirm me your mobile number?"
-  utter_solution:
-    - text: "Sure sir, I will guide you for that. Go to your settings, select network, and select 3G if you’ve chosen 4G because your sim is not supporting 4G. That’s why you are facing problems while calling."
-  utter_solution_4G:
-    - text: "Please visit your nearest M-Pesa shop. They will provide you with assistance"
-  utter_submit:
-    - text: "Your name is {name} and your headset is {headset}. Is this correct?"
-  utter_tell_issue:
-    - text: "Thanks for confirming, tell me what issues you are facing?"
-  utter_your_num:
-    - text: "Your number is {number}?"
-  utter_wrong_value:
-    - text: "Enter the valid headset!"
+    - text: "Hello! I am here to assist you with your donation. How much would you like to donate today?"
+  utter_ask_AMOUNT:
+    - text: "Please confirm the amount you would like to donate."
+  utter_ask_PHONE_NUMBER:
+    - text: "To process your donation, please provide your phone number."
+  utter_confirm_donation:
+    - text: "Thank you for your generous donation. Your support will make a difference!"
+  utter_donation_cancelled:
+    - text: "Your donation has been cancelled. If you have any questions, feel free to ask."
   utter_thanks:
-    - text: "Thank you for calling Innovate Yourself."
-  utter_anything_else:
-    - text: "Is there anything else I can help you with?"
+    - text: "Thank you for your donation! Your support is greatly appreciated."
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
 
 actions:
-  - action_your_num
-  - utter_change_settings
-  - utter_cheer_up
-  - utter_chitchat
-  - utter_did_that_help
-  - utter_goodbye
-  - utter_greet
-  - utter_happy
-  - utter_iamabot
-  - utter_num_confirm
-  - utter_num_verify
-  - utter_solution
-  - utter_solution_4G
-  - utter_submit
-  - utter_tell_issue
-  - utter_your_num
-  - utter_thanks
-  - utter_anything_else
+  - action_process_donation
+  - action_confirm_donation
+  - action_cancel_donation
+  - utter_ask_AMOUNT
 
-forms:
-  form_info:
-    required_slots:
-    - BRAND
-    - NAME
-        
-slots:
-  BRAND:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: BRAND
-        intent: headset
-        not_intent: excluded_intent
-  NAME:
-    type: any
-    mappings:
-      - type: from_entity
-        entity: NAME
-        intent: my_name_is
-        not_intent: excluded_intent
-  requested_slot:
-    type: any
-    mappings:
-      - type: from_text
-        intent: have_to_do
-
-
-entities:
-  - BRAND
-  - NAME
-  - NETWORK
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 
